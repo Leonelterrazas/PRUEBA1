@@ -1,0 +1,213 @@
+html{
+    font-size: 65.5%;
+    box-sizing: border-box;
+}
+
+*, *::before,*::after{
+    box-sizing: inherit;
+}
+body{
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
+    font-family: 'Inconsolata', monospace;
+    background: url(../img/foto5.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+nav{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    min-height: 9vh;
+    background-color: rgba(134, 62, 10,0.7);
+}
+.ham{
+    display: none;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+.logo{
+    padding: 3px;
+    width: 80px;
+    border-radius: 50px;
+}
+.ham span{
+    display: block;
+    background-color: #f3f3f3;
+    height: 3px;
+    width: 28px;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+.enlaces-menu{
+    display: flex;
+    padding: 20px;
+}
+.enlaces-menu li{
+    padding: 0 40px;
+    list-style-type: none;
+    transition: 0.4s;
+}
+.enlaces-menu li a{
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #f3f3f3;
+    font-weight: 600;
+}
+.enlaces-menu li:hover{
+    color: #f3f3f3;
+    text-shadow: 4px 3px 4px #f3f3f3;
+}
+/* DISPOSITIVOS MOVILES */
+@media (max-width:800px) {
+    body{
+        overflow:hidden;
+    }
+    .logo{
+        position: relative;
+        text-align: start;
+    }
+    .ham{
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        transition: 0.2s;
+    }
+    .ham:hover{
+        transform: rotate(360deg);
+    }
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px 0;
+    }
+    .enlaces-menu{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 95vh;
+        margin: 0;
+        padding: 0;
+        width: 100%; 
+        display: none;
+    }
+    .enlaces-menu li{
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+    @keyframes muestraMenu{
+        from {opacity:0;}
+        to {opacity:1;}
+    }
+    .enlaces-menu.activado{
+        display: flex;
+        animation: muestraMenu 400ms ease-in-out both;
+    }
+    .br-1.animado{
+        transform: rotate(-45deg) translate(-10px, 8px);
+    }
+    .br-2.animado{
+        opacity: 0;
+    }
+    .br-3.animado{
+        transform: rotate(45deg) translate(-10px, -8px);
+    }
+}
+/*LOGIN*/
+.login-box{
+    padding: 90px 30px;
+    width: 400px;
+    height: 525px;
+    background-color: #000;
+    position: relative;
+    margin: auto;
+    color: #f3f3f3;
+}
+
+.login-box .image-logo{
+    width: 110px;
+    height: 110px;
+    flex-wrap: wrap;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+.login-box h1{
+    font-size: 35px;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+.form2{
+    font-size: 15px;
+}
+.login-box input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.formulario{
+    margin: 90px 20px;
+}
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    border: none;
+    border-bottom: 1px solid#f3f3f3;
+    background-color:transparent;
+    outline: none;
+    height: 30px;
+    color: #f3f3f3;
+    font-size: 16px;
+}
+.login-box input[type="submit"]{
+    border: none;
+    cursor: pointer;
+    outline: none;
+    height: 40px;
+    background-color: rgb(25, 39, 145);
+    color: #f3f3f3;
+    font-size: 18px;
+}
+.login-box input[type="submit"]:focus{
+    background-color: rgb(100, 117, 247);
+}
+.login-box input[type="submit"]:hover{
+    background-color: rgb(15, 30, 149);
+}
+.login-box a{
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 20px;
+    color: rgb(100, 117, 247);
+}
+.login-box a:hover{
+    color: rgb(141, 152, 233);
+    text-shadow: 2px 3px 4px rgb(141, 152, 233);
+}
+/*BARRA DE ABAJO*/
+.footer-content{
+    color: #f3f3f3;
+    font-size: 25px;
+    height: 50px;
+    background-color: #d70909;
+}
+.grid-footer{
+    margin-top: 17em;
+    grid-area: footer;
+    position: relative;
+    
+}
+.p{
+    text-align: center;
+}
+
+
